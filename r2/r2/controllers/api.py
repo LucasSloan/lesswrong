@@ -624,6 +624,18 @@ class ApiController(RedditController):
             if g.use_query_cache:
                 queries.new_comment(thing, None)
 
+    @Json
+    @validate(thing = VByName('id'))
+    def POST_move(self, res, thing):
+        print thing
+        print "something happened"
+        if isinstance(thing, Comment):
+            print 'the javascript call worked'
+            newplace = Link._byID(4)
+            Comment._new(Account._byID(thing.author_id), newplace, None, thing.body, thing.ip)
+            thing.author = c.user
+            thing.body = "This comment was shitcanned"
+            thing._commit()
 
     @Json
     @validate(VUser(), VModhash(),

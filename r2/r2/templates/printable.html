@@ -92,6 +92,10 @@ ${self.RenderPrintable()}
       "return change_state(this, 'ban');", _("Banned"))}
     </li>
     %endif
+  <li class='move'>
+    ${state_button("move", fullname, _("Move"), \
+    "return change_state(this, 'move');", _("Moved"))}
+  </li>
   %if thing.show_reports:
     <li class='ignore'>
     ${state_button("ignore", fullname, _("Ignore"), \
