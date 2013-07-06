@@ -1,6 +1,10 @@
 <%namespace file="utils.html" import="plain_link"/>
 <h2>
+<<<<<<< HEAD
   ${plain_link(_('Latest '+thing.title), thing.url)}:
+=======
+  ${plain_link(_('Recent '+thing.title), '/tag/'+thing.tag)}:
+>>>>>>> 7ca12bd... Side bar recent specifics working.
 </h2>
 <% 
    t = thing.things

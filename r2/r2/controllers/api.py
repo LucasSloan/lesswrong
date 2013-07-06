@@ -1106,17 +1106,29 @@ class ApiController(RedditController):
     def GET_side_open(self, *a, **kw):
         """Return HTML snippet of the recent comments for the side bar."""
         # Server side cache is also invalidated when new comment is posted
+<<<<<<< HEAD
         return self.render_cached('side-open', RecentTagged, g.side_comments_max_age, tagtype = 'open_thread', title = 'Open Thread')
+=======
+        return self.render_cached('side-open', RecentTagged, g.side_comments_max_age, tagtype = 'open_thread', title = 'Open Threads')
+>>>>>>> 7ca12bd... Side bar recent specifics working.
 
     def GET_side_quote(self, *a, **kw):
         """Return HTML snippet of the recent comments for the side bar."""
         # Server side cache is also invalidated when new comment is posted
+<<<<<<< HEAD
         return self.render_cached('side-open', RecentTagged, g.side_comments_max_age, tagtype = 'quotes', title = 'Rationality Quote')
+=======
+        return self.render_cached('side-open', RecentTagged, g.side_comments_max_age, tagtype = 'quotes', title = 'Rationality Quotes')
+>>>>>>> 7ca12bd... Side bar recent specifics working.
 
     def GET_side_diary(self, *a, **kw):
         """Return HTML snippet of the recent comments for the side bar."""
         # Server side cache is also invalidated when new comment is posted
+<<<<<<< HEAD
         return self.render_cached('side-open', RecentTagged, g.side_comments_max_age, tagtype = 'group_rationality_diary', title = 'Rationality Diary')
+=======
+        return self.render_cached('side-open', RecentTagged, g.side_comments_max_age, tagtype = 'group_rationality_diary', title = 'Rationality Diaries')
+>>>>>>> 7ca12bd... Side bar recent specifics working.
 
     def GET_side_tags(self, *a, **kw):
         """Return HTML snippet of the tags for the side bar."""
